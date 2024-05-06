@@ -1,0 +1,69 @@
+Program idea
+
+
+// Problem Statment
+Determine if prescription meets program(340B) requirements for discount medication from manufacturer. 
+Apply discount if: Patient record with hospital/clinic.Patient had appointment.
+If yes, calculate discounted total: cost minus discount plus fee. 
+If no, calculate total: cost plus fee.
+
+
+//Nouns & Verbs
+Noun:prescription, medication, patient, record, appointment, total, discount, cost, fee
+Verb:Determine, apply, calculate
+
+
+//Algorithym
+Input: Rx number, Cost, Record/Appointment
+
+Processing: Determine meets requirements, calulate final costs
+
+Output: 
+IF meets: "Prescription + RxNumber + "is ELIGIBLE. Total is $" + total
+IF does not meet: "Prescription + RxNumber + "is NOT ELIGIBLE. Total is $" + total
+
+Pseudo
+//Variables
+Rx number
+VisitRecord
+Cost
+Total
+Output
+
+BEGIN
+Prompt rx number
+add to counter for each rx number
+Prompt if criteria is met
+Prompt cost
+loop until 0 entered
+Calulate total = cost(if elig = 10% discount) add $5 fee
+Display rx number eligibilty and total
+Display count of rx numbers
+END
+
+
+Input: 544267, yes, 200.50, 0
+
+Expect:Prescription number 544267 is ELIGIBLE. Total is $185.45
+
+
+Actual Result: Prescription number 544267 is ELIGIBLE. Total is $ 185.45
+
+Input: 482922-22, no, 40.00, 0
+
+Prescription number 482922-22 is NOT ELIGIBLE. Total is $ 45.00
+
+Actual Result:
+
+Input: 382, no, ten, 456743, yes, 0, 234-1, 0, 5, yes, 0 
+*(When eligibility question contains anything other than yes or no alert will present for re-entry*
+
+Expect:
+You must reprocess prescription number 382 due to invalid cost entered.
+You must reprocess prescription number 456743 due to invalid cost entered.
+Prescription number 234=1 is NOT ELIGIBLE. Total is $ 10.00
+
+Actual Result:
+You must reprocess prescription number 382 due to invalid cost entered.
+You must reprocess prescription number 456743 due to invalid cost entered.
+Prescription number 234=1 is NOT ELIGIBLE. Total is $ 10.00
